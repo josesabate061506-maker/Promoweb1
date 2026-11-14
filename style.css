@@ -22,6 +22,10 @@
     scroll-behavior: smooth;
 }
 
+html {
+    scroll-padding-top: 110px;
+}
+
 body {
     font-family: 'Poppins', sans-serif;
     color: var(--text);
@@ -32,7 +36,6 @@ body {
 img {
     width: 100%;
     display: block;
-    object-fit: cover;
 }
 
 a {
@@ -582,7 +585,7 @@ a {
 
 
 /* =================================
-   TEAM
+   MEET OUR TEAM
 ================================= */
 
 .team {
@@ -592,37 +595,54 @@ a {
 .team-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 25px;
+    gap: 30px;
 }
 
 .team-card {
     text-align: center;
     padding: 30px 20px;
+    background: var(--white);
     border: 1px solid #E9EEE8;
     border-radius: 15px;
+    transition: .3s;
 }
 
-.team-avatar {
-    width: 95px;
-    height: 95px;
+.team-card:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 12px 30px rgba(7, 61, 42, .10);
+}
+
+
+/* REPLACEABLE TEAM PROFILE PICTURES */
+
+.team-photo {
+    width: 180px;
+    height: 180px;
+    margin: 0 auto 20px;
     border-radius: 50%;
-    background: var(--dark-green);
-    color: var(--yellow);
-    display: grid;
-    place-items: center;
-    font-size: 25px;
-    font-weight: 800;
-    margin: 0 auto 18px;
+    overflow: hidden;
+    border: 5px solid var(--yellow);
+    background: var(--cream);
+}
+
+.team-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
 }
 
 .team-card h3 {
-    font-size: 15px;
+    font-size: 16px;
     color: var(--dark-green);
+    margin-bottom: 5px;
 }
 
 .team-card span {
     font-size: 12px;
     color: var(--olive);
+    font-weight: 600;
 }
 
 
@@ -696,7 +716,7 @@ a {
     display: grid;
     place-items: center;
     border-radius: 50%;
-    margin: auto auto 15px;
+    margin: 0 auto 15px;
     background: var(--yellow);
     color: var(--dark-green);
     font-size: 25px;
@@ -740,7 +760,7 @@ a {
 }
 
 
-/* FULL LOGO IN FOOTER */
+/* FULL LOGO WITH WHITE BACKGROUND */
 
 .footer-brand .logo {
     width: 125px;
@@ -894,6 +914,11 @@ a {
         height: 380px;
     }
 
+    .team-photo {
+        width: 150px;
+        height: 150px;
+    }
+
     .footer-content {
         grid-template-columns: repeat(2, 1fr);
     }
@@ -914,6 +939,10 @@ a {
 ================================= */
 
 @media (max-width: 480px) {
+
+    html {
+        scroll-padding-top: 85px;
+    }
 
     .section-padding {
         padding: 65px 0;
@@ -973,6 +1002,11 @@ a {
 
     .about-image {
         height: 300px;
+    }
+
+    .team-photo {
+        width: 170px;
+        height: 170px;
     }
 
     .footer-content {
