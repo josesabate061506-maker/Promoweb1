@@ -1,3 +1,4 @@
+
 /* =================================
    PEDIGO PROMOTIONAL WEBSITE
 ================================= */
@@ -108,7 +109,6 @@ a {
     gap: 25px;
 }
 
-
 /* PEDIGO LOGO AND BRAND NAME */
 
 .brand-lockup {
@@ -150,7 +150,6 @@ a {
 .brand-go {
     color: #F4BE38;
 }
-
 
 /* NAVIGATION LINKS */
 
@@ -529,51 +528,88 @@ a {
 
 
 /* =================================
-   FEATURES
+   FEATURES SECTION
 ================================= */
 
 .features {
     background: var(--white);
+    padding: 90px 0;
 }
+
+/* Center the section heading */
+
+.features .section-heading {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto 45px;
+}
+
+/* Feature cards grid */
 
 .features-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
+    gap: 25px;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
+/* Center all card contents */
+
 .feature-card {
-    padding: 30px 25px;
-    border: 1px solid #E9EEE8;
-    border-radius: 13px;
-    transition: .3s;
+    padding: 35px 25px;
+    border: 1px solid #E5EAE5;
+    border-radius: 17px;
+    text-align: center;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    min-height: 260px;
+    transition: 0.3s ease;
 }
+
+/* Card hover effect */
 
 .feature-card:hover {
     background: var(--cream);
     transform: translateY(-5px);
 }
 
+/* Center feature icons */
+
 .feature-icon {
-    width: 55px;
-    height: 55px;
-    border-radius: 12px;
+    width: 68px;
+    height: 68px;
+    border-radius: 15px;
     background: #F9EAB5;
-    display: grid;
-    place-items: center;
-    font-size: 25px;
-    margin-bottom: 20px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 28px;
+    margin: 0 auto 25px;
 }
+
+/* Feature titles */
 
 .feature-card h3 {
     color: var(--dark-green);
-    font-size: 17px;
-    margin-bottom: 8px;
+    font-size: 19px;
+    margin-bottom: 12px;
 }
+
+/* Feature descriptions */
 
 .feature-card p {
     color: var(--gray);
-    font-size: 12px;
+    font-size: 14px;
+    max-width: 350px;
+    margin: 0 auto;
+    line-height: 1.7;
 }
 
 
@@ -650,8 +686,7 @@ a {
     box-shadow: 0 12px 30px rgba(7, 61, 42, .10);
 }
 
-
-/* REPLACEABLE TEAM PROFILE PICTURES */
+/* TEAM PROFILE PICTURES */
 
 .team-photo {
     width: 180px;
@@ -887,7 +922,7 @@ a {
 
 
 /* =================================
-   MOBILE RESPONSIVE
+   TABLET AND MOBILE RESPONSIVE
 ================================= */
 
 @media (max-width: 768px) {
@@ -977,6 +1012,13 @@ a {
 
     .promo-video {
         border-radius: 8px;
+    }
+
+    /* FEATURES TABLET LAYOUT */
+
+    .features-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
     }
 
 }
@@ -1076,6 +1118,18 @@ a {
     .intro-grid h2,
     .about-content h2 {
         font-size: 30px;
+    }
+
+    /* FEATURES MOBILE LAYOUT */
+
+    .features-grid {
+        grid-template-columns: 1fr;
+        max-width: 350px;
+        margin: 0 auto;
+    }
+
+    .feature-card {
+        min-height: 230px;
     }
 
 }
